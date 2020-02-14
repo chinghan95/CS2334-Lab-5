@@ -78,6 +78,9 @@ public class Calculator {
 		}
 		
 		// Otherwise, throw a CalculatorNumTokensException.
+		else if (numTokens > 0) {
+			throw new CalculatorNumTokensException("Invalid number of tokens: ", numTokens);
+		}
 		else {
 			throw new CalculatorNumTokensException(numTokens);
 		}
