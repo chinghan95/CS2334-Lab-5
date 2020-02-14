@@ -16,6 +16,11 @@ public class CalculatorNumTokensException extends Exception{
 		
 		// Pass the number of tokens to the parent class constructor that 
 		// takes a single String argument. (See the Exception class API.)
-		super("Invalid number of tokens: " + Integer.toString(numTokens));
+		super(Integer.toString(numTokens));
+	}
+	
+	public CalculatorNumTokensException(String message, int numTokens) {
+		
+		super(message + Integer.toString(numTokens));
 	}
 }
